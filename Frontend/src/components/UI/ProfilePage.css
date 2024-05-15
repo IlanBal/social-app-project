@@ -1,0 +1,288 @@
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  margin: 0 auto;
+}
+
+.home-logo {
+  position: fixed;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../../public/images/logo.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+
+.logout-logo {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  margin-left: 250px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  background-image: url(../../../public/images/logout-logo.svg);
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: invert(100%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+
+.logout-logo:hover {
+  opacity: 0.8;
+}
+
+.followerScreen {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(
+      to bottom,
+      rgb(50, 50, 50) 0%,
+      #3f3f3f 40%,
+      #1c1c1c 150%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+
+.followerScreenContainer {
+  margin-top: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.followerScreenPosition {
+  position: fixed;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.searchInput {
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s ease-in;
+  margin-bottom: 10px;
+}
+
+.searchInput:focus {
+  border-color: #cee6ff; /* Blue border on focus */
+}
+
+.profileScreen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.userProfileBackground {
+  width: 100%;
+  height: 300px;
+  border-bottom: 5px inset rgba(0, 0, 0);
+}
+
+.userProfileBox {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userProfileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.userProfileNickname {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.userProfileUsername {
+  color: rgb(113, 118, 123);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.userProfileDate {
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  top: 100px;
+  right: 125px;
+}
+.userProfileImage {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.userProfileBio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 400px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.userProfileEdit {
+  position: absolute;
+  width: 100px;
+  text-wrap: nowrap;
+  background: #1b94e0;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  left: 900px;
+  text-align: center;
+  background-position: center;
+  transition: background 0.6s;
+}
+
+.userProfileEdit:hover {
+  background: rgba(27, 148, 224, 0.9)
+    radial-gradient(circle, transparent 1%, rgba(27, 148, 224, 0.9) 1%)
+    center/15000%;
+}
+
+.userProfileEdit:active {
+  background-color: rgba(27, 148, 224, 0.8);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.userButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.userButtons button {
+  width: 100%;
+  height: 40px;
+  background: #d8d8d8;
+  color: #6f6f6f;
+  border: 1px hidden;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-position: center;
+  transition: background 0.6s;
+}
+
+.postButton.active {
+  color: #000;
+}
+
+.followingButton.active {
+  color: #000;
+}
+
+.userButtons button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.activeButton {
+  position: relative;
+  height: 5px;
+  width: 35%;
+  background: #1b94e0;
+  border-radius: 20px;
+  bottom: 15px;
+  left: 7.5%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.optionPostList {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.optionFollowingList {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.followingMain {
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+  width: 100%;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+  margin-bottom: 2px;
+  padding: 10px 15px; /* Vertical space between posts */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.followingMain:first-child {
+  margin-top: -14px;
+}
+
+.followingHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.followingUserImage {
+  background-size: cover;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 5px 5px 0;
+}
+
+.followingName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #14171a;
+  margin-right: 5px;
+}
+
+.followingSlug {
+  color: #5b7083;
+  font-size: 15px;
+  font-weight: 400;
+}

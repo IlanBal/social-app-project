@@ -1,0 +1,359 @@
+.homepage-container {
+  display: grid;
+  grid-template-columns: 300px auto;
+  margin: 0 auto;
+}
+
+.home-logo {
+  position: fixed;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../../public/images/logo.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+
+.logout-logo {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  margin-left: 250px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  background-image: url(../../../public/images/logout-logo.svg);
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: invert(100%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+
+.logout-logo:hover {
+  opacity: 0.8;
+}
+
+.userScreen {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(
+      to bottom,
+      rgb(50, 50, 50) 0%,
+      #3f3f3f 40%,
+      #1c1c1c 150%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+
+.screen-position-left {
+  position: fixed;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.userProfile {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.searchInput {
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s ease-in;
+  margin-bottom: 10px;
+}
+
+.searchInput:focus {
+  border-color: #cee6ff; /* Blue border on focus */
+}
+
+.userImage {
+  width: 96px;
+  height: 96px;
+  opacity: 0.8;
+  margin: 0 10px 5px 0;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+
+.userImage:hover {
+  opacity: 1;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.userNickname {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.username {
+  color: rgb(113, 118, 123);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.followMain {
+  background-color: rgba(75, 75, 75, 0.7);
+  border-bottom: 1px solid rgb(50, 50, 50);
+  border-top: 1px solid rgb(50, 50, 50);
+  margin-bottom: 2px;
+  padding: 10px 15px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.followerState {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.postState {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.followingList {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.followMain:hover {
+  background-color: rgba(250, 250, 250, 0.03);
+  cursor: pointer;
+}
+
+.followMain p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.followUserImage {
+  background-size: cover;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px 0 5px;
+}
+
+.followHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.followName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #dfdfdf;
+  margin-right: 5px;
+}
+
+.followSlug {
+  color: #5b7083;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.followerAdd {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: auto;
+  background-image: url("../../../public/images/addFollower.svg");
+  background-position: center;
+  background-size: 35px;
+  border: none;
+  background-color: rgba(255, 255, 255);
+  transition: background-color 0.2s ease-in;
+}
+
+.followerAdd:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.postScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255);
+}
+
+.postInputBox {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.postInputBox textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 120px;
+  max-height: 280px;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 5px;
+  padding: 10px 10px;
+}
+
+.postInputBox textarea::placeholder {
+  color: #aaa; /* Gray placeholder text */
+}
+
+.postInputBox button {
+  background-color: #00aced; /* Twitter blue */
+  color: #fff; /* White text */
+  border: none;
+  align-self: flex-end;
+  max-height: 40px;
+  padding: 10px 15px; /* Adjust padding for button size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable button */
+  font-weight: bold; /* Bold text */
+  margin-left: 10px; /* Add spacing from textarea */
+}
+
+.postInputBox button:hover {
+  background-color: #0095cc; /* Darker blue on hover */
+}
+
+.postInputBox button:disabled {
+  background-color: #ddd; /* Gray out disabled button */
+  cursor: default; /* Remove pointer indication */
+}
+
+.postList {
+  width: 30%;
+  text-align: center;
+  color: #000;
+}
+
+.postMain {
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+  width: 100%;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+  margin-bottom: 2px;
+  padding: 10px 15px; /* Vertical space between posts */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.postMain:first-child {
+  margin-top: -14px;
+}
+
+.postHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.postUserImage {
+  background-size: cover;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 5px 5px 0;
+}
+
+.postName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #14171a;
+  margin-right: 5px;
+}
+
+.postSlug {
+  color: #5b7083;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.postContent {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: start;
+  margin-left: 53px;
+}
+
+.postMain:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.postMain a {
+  color: #1b94e0;
+  text-decoration: none;
+  transition: text-decoration 0.5s ease-in-out;
+}
+
+.postMain a:hover {
+  text-decoration: underline;
+}
+
+.rightBar {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(
+      to bottom,
+      rgb(50, 50, 50) 0%,
+      #3f3f3f 40%,
+      #1c1c1c 150%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}

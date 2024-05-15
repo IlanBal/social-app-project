@@ -1,0 +1,207 @@
+.editScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.editProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.editOverlay {
+  position: relative;
+  width: 600px;
+  height: 650px;
+  background: linear-gradient(
+      to bottom,
+      rgb(50, 50, 50) 0%,
+      #3f3f3f 40%,
+      #1c1c1c 150%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  border: 1px solid #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+}
+
+.exitEdit {
+  align-self: flex-start;
+  width: 36px;
+  height: 36px;
+  background-image: url("../../../public/images/close-icon.svg");
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.exitEdit:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.editTitle {
+  transform: translateY(-100%);
+  color: #ffffff;
+}
+
+.editUserBackground {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 70px;
+}
+
+.changeBackground {
+  position: absolute;
+  top: 23%;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.changeBackground:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.editUserImage {
+  position: absolute;
+  background: #000;
+  background-image: url("../../../public/images/add-Image.svg");
+  width: 96px;
+  height: 96px;
+  left: 3%;
+  top: 35%;
+  border-radius: 50%;
+  border: 3px solid rgb(50, 50, 50);
+}
+
+.changeUserImage {
+  position: absolute;
+  left: 8%;
+  top: 40%;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.changeUserImage:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.editName {
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 95%;
+  height: 50px;
+  transition: border-color 0.2s ease-in;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.editName::placeholder {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.editBio {
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  width: 95%;
+  height: 80px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.editOverlay label {
+  position: absolute;
+}
+
+.editOverlay input {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.editBio::placeholder {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.editBirthDate {
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.editOverlay input:focus {
+  border: 1px solid #1b94e0;
+}
+
+.editOverlay input:focus::placeholder {
+  color: #1b94e0;
+  position: absolute;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.saveProfile {
+  background: #1b94e0;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 10px 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background 0.6s;
+}
+
+.saveProfile:hover {
+  background: rgba(27, 148, 224, 0.9)
+    radial-gradient(circle, transparent 1%, rgba(27, 148, 224, 0.9) 1%)
+    center/15000%;
+}
+
+.saveProfile:active {
+  background-color: rgba(27, 148, 224, 0.8);
+  background-size: 100%;
+  transition: background 0s;
+}
